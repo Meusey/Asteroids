@@ -49,8 +49,8 @@ def main():
             for s in shots:
                 if a.collides_with(s):
                     log_event("asteroid_shot")
-                    pygame.sprite.Sprite.kill(a)
-                    pygame.sprite.Sprite.kill(s)
+                    a.split()
+                    s.kill()
 
         screen.fill("black")
 
