@@ -13,8 +13,8 @@ class CircleShape(pygame.sprite.Sprite):
         pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
 
     def update(self, dt):
-        self.x += self.velocity.x * dt
-        self.y += self.velocity.y * dt
+        self.position += self.velocity * dt
+
 
     def collides_with(self, other):
         distance = self.position.distance_to(other.position)
